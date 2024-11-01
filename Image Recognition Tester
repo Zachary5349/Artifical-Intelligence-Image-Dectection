@@ -1,4 +1,4 @@
-###############################
+#
 #  Load our pre-trained model that we create with the previous code "Image Recongition Trainer.py"
 #
 #  Load some images from the internet that were not part of the CIFAR training or testing set.
@@ -8,7 +8,7 @@
 #  Note: this code is heavily modified from the example code located at:
 #  https://www.kaggle.com/code/vikasbhadoria/cifar10-high-accuracy-model-build-on-pytorch/notebook
 #
-###############################
+#
 
 
 import torch
@@ -92,5 +92,3 @@ for test_image in images_to_test:
     output = net(image)  # was model(images)
     _, pred = torch.max(output, 1)
     print(f"The image {test_image} has been identified as a: {classes[pred.item()]}")
-
-
